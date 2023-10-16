@@ -1,4 +1,4 @@
-# CLEANING-UP PLOT FOR JOUNRAL A
+# LOOKING AT JOURNAL B
 library(tidyverse)
 
 surv<-read.csv("data/whas500.csv")%>%
@@ -9,15 +9,16 @@ surv<-read.csv("data/whas500.csv")%>%
 
 
 pubgraph1<-
-  ggplot(data = surv, mapping = aes(x =SYSBP , y =DIASBP)) + 
-  geom_point() +
-  facet_grid(rows = vars(CVD_C), cols = vars(GENDER_C)) +
-  labs(title="Diastolic and Systolic Blood Pressure by Gender and Cardiovascular Disease Status",
-       x="Systolic Blood Pressure",
-       y="Diastolic Blood Pressure",
-       caption="Data source: Survival 500 data")
+  ggplot(data = surv, mapping = aes(x =DIASBP , y =SYSBP )) + 
+  geom_point() + 
+  facet_grid(rows = vars(AFB_C), cols = vars(GENDER_C)) +
+  labs(title="Systolic and Diasolic Blood Pressure by Gender and Disease Status",
+       y="Systolic Blood Pressure",
+       x="Diastolic Blood Pressure",
+       caption="Data source: Survival 500 data")+
+  geom_smooth(mapping=aes(group=NA,  x=DIASBP,y=SYSBP))
 
-ggplot2::ggsave(filename="images/pubgraph1-dot2.jpg",
+ggplot2::ggsave(filename="images/pubgraph1-dot3.jpg",
                 plot=pubgraph1,
                 device="jpg",
                 dpi = 72,
