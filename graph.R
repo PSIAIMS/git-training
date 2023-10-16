@@ -1,4 +1,4 @@
-# CLEANING-UP PLOT FOR JOUNRAL A
+# JOUNRAL A UPDATE
 library(tidyverse)
 
 surv<-read.csv("data/whas500.csv")%>%
@@ -15,9 +15,10 @@ pubgraph1<-
   labs(title="Diastolic and Systolic Blood Pressure by Gender and Cardiovascular Disease Status",
        x="Systolic Blood Pressure",
        y="Diastolic Blood Pressure",
-       caption="Data source: Survival 500 data")
+       caption="Data source: Survival 500 data") +
+  theme_bw()
 
-ggplot2::ggsave(filename="images/pubgraph1-dot2.jpg",
+ggplot2::ggsave(filename="images/pubgraph1-dotJA1.jpg",
                 plot=pubgraph1,
                 device="jpg",
                 dpi = 72,
