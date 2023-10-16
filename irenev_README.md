@@ -1,2 +1,2 @@
 # git-training
-we are in the main branch
+we are in our new branch
