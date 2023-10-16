@@ -12,13 +12,13 @@ pubgraph1<-
   ggplot(data = surv, mapping = aes(x =SYSBP , y =DIASBP)) + 
   geom_point() +
   facet_grid(rows = vars(CVD_C), cols = vars(GENDER_C)) +
-  labs(title="Diastolic and Systolic Blood Pressure by Gender and Cardiovascular Disease Status",
+  labs(title="Diastolic and Systolic Blood Pressure\nBy Gender and Cardiovascular Disease Status",
        x="Systolic Blood Pressure",
        y="Diastolic Blood Pressure",
        caption="Data source: Survival 500 data") +
   theme_bw()
 
-ggplot2::ggsave(filename="images/pubgraph1-dotJA1.jpg",
+ggplot2::ggsave(filename="images/pubgraph1-dotJA2.jpg",
                 plot=pubgraph1,
                 device="jpg",
                 dpi = 72,
