@@ -33,3 +33,6 @@ ggplot2::ggsave(filename="images/pubgraph1-dot4.jpg",
                 width=450,
                 height=400,
                 units = "px")
+
+
+# I think this is great
