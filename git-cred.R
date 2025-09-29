@@ -9,7 +9,8 @@
 install.packages(c("usethis", "credentials"))
 
 ## set your user name and email:
-usethis::use_git_config(user.name = "asavarim", user.email = "mehta.asavari@gmail.com")
+usethis::use_git_config(user.name = "", user.email = "",
+                        scope = "project")
 
 # ----------------------------------------------------------------------------
 
